@@ -41,6 +41,7 @@
             this.cNama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clearBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.searchTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.jurusanDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.kodeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kodeTxt.Location = new System.Drawing.Point(71, 97);
             this.kodeTxt.Name = "kodeTxt";
-            this.kodeTxt.Size = new System.Drawing.Size(370, 30);
+            this.kodeTxt.Size = new System.Drawing.Size(520, 30);
             this.kodeTxt.TabIndex = 0;
             // 
             // cekBtn
@@ -93,7 +94,7 @@
             this.namaTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namaTxt.Location = new System.Drawing.Point(71, 198);
             this.namaTxt.Name = "namaTxt";
-            this.namaTxt.Size = new System.Drawing.Size(495, 30);
+            this.namaTxt.Size = new System.Drawing.Size(520, 30);
             this.namaTxt.TabIndex = 4;
             // 
             // updateBtn
@@ -133,9 +134,9 @@
             this.cariBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cariBtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cariBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cariBtn.Location = new System.Drawing.Point(459, 97);
+            this.cariBtn.Location = new System.Drawing.Point(613, 259);
             this.cariBtn.Name = "cariBtn";
-            this.cariBtn.Size = new System.Drawing.Size(107, 34);
+            this.cariBtn.Size = new System.Drawing.Size(247, 34);
             this.cariBtn.TabIndex = 8;
             this.cariBtn.Text = "Search";
             this.cariBtn.UseVisualStyleBackColor = false;
@@ -145,11 +146,15 @@
             // 
             this.jurusanDgv.AllowUserToAddRows = false;
             this.jurusanDgv.AllowUserToDeleteRows = false;
+            this.jurusanDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.jurusanDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.jurusanDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.jurusanDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cKode,
             this.cNama});
-            this.jurusanDgv.Location = new System.Drawing.Point(71, 276);
+            this.jurusanDgv.Location = new System.Drawing.Point(71, 312);
             this.jurusanDgv.Name = "jurusanDgv";
             this.jurusanDgv.ReadOnly = true;
             this.jurusanDgv.RowHeadersWidth = 62;
@@ -207,11 +212,21 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // searchTxt
+            // 
+            this.searchTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTxt.Location = new System.Drawing.Point(71, 259);
+            this.searchTxt.Name = "searchTxt";
+            this.searchTxt.Size = new System.Drawing.Size(520, 30);
+            this.searchTxt.TabIndex = 12;
+            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 596);
+            this.ClientSize = new System.Drawing.Size(943, 610);
+            this.Controls.Add(this.searchTxt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.jurusanDgv);
@@ -223,10 +238,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cekBtn);
             this.Controls.Add(this.kodeTxt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.KeyPreview = true;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "SIREMA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.jurusanDgv)).EndInit();
@@ -250,6 +266,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cNama;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox searchTxt;
     }
 }
 

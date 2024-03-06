@@ -164,5 +164,17 @@ namespace SIREMA
                 }
             }
         }
+
+        private void searchTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (searchTxt.Text == "")
+            {
+                jurusanDgv.DataSource = jurusan.showAll();
+            }
+            else
+            {
+                jurusanDgv.DataSource = jurusan.search(searchTxt.Text);
+            }
+        }
     }
 }
