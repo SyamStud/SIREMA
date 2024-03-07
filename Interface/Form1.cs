@@ -176,5 +176,10 @@ namespace SIREMA
                 jurusanDgv.DataSource = jurusan.search(searchTxt.Text);
             }
         }
+
+        private void kodeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
